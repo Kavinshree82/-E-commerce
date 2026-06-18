@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout – ShopEase</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">ShopEase</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="checkout.html" class="active">Checkout</a>
+    </div>
+    <button class="cart-btn" onclick="window.location.href='index.html'">
+      🛒 Cart <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </nav>
+
+  <section class="checkout-section">
+    <div class="checkout-container">
+
+      <!-- ORDER SUMMARY -->
+      <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div id="order-items"></div>
+        <div class="order-total">
+          <span>Total:</span>
+          <span id="order-total">₹0</span>
+        </div>
+      </div>
+
+      <!-- CHECKOUT FORM -->
+      <div class="checkout-form-wrapper">
+        <h2>Shipping Details</h2>
+        <div class="checkout-form" id="checkout-form">
+
+          <div class="form-group">
+            <label for="full-name">Full Name *</label>
+            <input type="text" id="full-name" placeholder="Kavinshree M" />
+            <span class="error-msg" id="err-name"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="you@email.com" />
+            <span class="error-msg" id="err-email"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="+91 9999999999" />
+            <span class="error-msg" id="err-phone"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Street Address *</label>
+            <input type="text" id="address" placeholder="123, Main Street" />
+            <span class="error-msg" id="err-address"></span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City *</label>
+              <input type="text" id="city" placeholder="Thanjavur" />
+              <span class="error-msg" id="err-city"></span>
+            </div>
+            <div class="form-group">
+              <label for="pincode">Pincode *</label>
+              <input type="text" id="pincode" placeholder="613007" />
+              <span class="error-msg" id="err-pincode"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="payment">Payment Method *</label>
+            <select id="payment">
+              <option value="">Select Payment</option>
+              <option value="upi">UPI</option>
+              <option value="card">Credit / Debit Card</option>
+              <option value="cod">Cash on Delivery</option>
+              <option value="netbanking">Net Banking</option>
+            </select>
+            <span class="error-msg" id="err-payment"></span>
+          </div>
+
+          <button class="btn-primary full-width" onclick="placeOrder()">Place Order</button>
+        </div>
+
+        <!-- SUCCESS STATE -->
+        <div class="order-success hidden" id="order-success">
+          <div class="success-icon">✅</div>
+          <h2>Order Placed!</h2>
+          <p>Thank you for your purchase. You'll receive a confirmation soon.</p>
+          <a href="index.html" class="btn-primary">Continue Shopping</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 ShopEase. Built with HTML, CSS & JavaScript.</p>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>
