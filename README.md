@@ -1,59 +1,72 @@
-# E-Commerce Web Application
+E-Commerce Web Application
 
-A responsive frontend e-commerce web application built using HTML, CSS, and JavaScript. The application provides a seamless shopping experience with dynamic cart management, persistent cart storage, responsive layouts, and client-side checkout validation.
+A responsive e-commerce frontend built with vanilla HTML, CSS, and JavaScript — featuring real-time product filtering, a persistent cart system using localStorage, and client-side checkout validation with regex-based field checks.
 
-## Features
 
-- Responsive product listing interface for mobile, tablet, and desktop devices
-- Dynamic shopping cart with add, remove, and quantity update functionality
-- localStorage persistence to retain cart items across sessions
-- Automatic subtotal and total price calculation
-- Client-side checkout form validation for improved user experience
-- Clean and user-friendly interface with modern layout styling
+Features
 
-## Technologies Used
+Product Catalogue
 
-- HTML
-- CSS
-- JavaScript
 
-## Project Structure
+12 products across 4 categories: Electronics, Clothing, Books, Home & Living
+Real-time search by product name or category
+Filter by category and sort by price (low to high / high to low)
+Product cards display ratings, discount percentage, and labels
 
-```bash
-ecommerce-web-app/
-│── ecommerce-web-application.html
-│── style.css
-│── script.js
-│── README.md
-│── LICENSE
-```
 
-## Installation and Usage
+Cart System
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/ecommerce-web-app.git
-   ```
 
-2. Navigate to the project folder:
-   ```bash
-   cd ecommerce-web-app
-   ```
+Add, remove, and update product quantities
+Cart state persists across browser sessions using localStorage
+Slide-in cart sidebar with live item count and total
+Toast notifications on cart actions
 
-3. Open `ecommerce-web-application.html` in any modern web browser.
 
-## Learning Outcomes
+Checkout
 
-This project demonstrates practical frontend development concepts such as DOM manipulation, event handling, state management, responsive UI design, and browser-based data persistence using localStorage.
 
-## Future Enhancements
+Order summary generated from cart state
+Client-side form validation with inline error messages:
 
-- Product search and category filtering
-- Sorting by price or popularity
-- Integration with backend APIs and database storage
-- User authentication and order history
-- Payment gateway integration
+Name, email (format check), Indian mobile number (10-digit regex), street address, 6-digit pincode
+Payment method: UPI, Credit/Debit Card, Cash on Delivery, Net Banking
 
-## License
 
-This project is licensed under the MIT License.
+
+Cart clears automatically after successful order placement
+
+
+UI & Responsiveness
+
+
+Mobile-first layout using CSS Grid and Flexbox
+Responsive across desktop, tablet, and mobile (480px breakpoint)
+Smooth hover transitions and animations
+No external libraries or frameworks — pure CSS custom properties
+
+
+
+Tech Stack
+
+LayerTechnologyStructureHTML5StylingCSS3 (Custom Properties, Grid, Flexbox)LogicVanilla JavaScript (ES6+)StoragelocalStorage API
+
+
+Project Structure
+
+ecommerce-app/
+├── index.html          # Product listing page
+├── checkout.html       # Checkout and order form
+├── css/
+│   └── style.css       # All styles
+└── js/
+    ├── products.js     # Product data
+    ├── cart.js         # Cart logic and localStorage management
+    ├── app.js          # Product rendering, search, filter, sort
+    └── checkout.js     # Form validation and order placement
+
+
+Author
+Kavinshree M
+B.Tech CSE, SASTRA Deemed University
+GitHub
